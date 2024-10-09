@@ -1,3 +1,35 @@
-<div>
-Itt lesznek az állatok!
+<div class="row my-2 fw-bold">
+    <div *ngFor="let oszlop of oszlopok" class="col">
+        {{oszlop}}
+    </div>
+    <div class="col">
+        Műveletek
+    </div>
 </div>
+<!-- fejléc kiíratás vége -->
+
+<!-- Új állat -->
+<div  class="row my-1">
+    <div *ngFor="let oszlop of oszlopok" class="col">
+        <input [(ngModel)]="newAnimal[oszlop]" type="text" class="form-control">
+
+    </div>
+    <div class="col">
+        <button (click)="addAnimal()" type="button" class="btn btn-danger">Add</button>
+    </div>
+</div>
+
+<!-- Állatok táblázatos kiíratása -->
+<div *ngFor="let allat of animals" class="row my-1">
+    <div *ngFor="let oszlop of oszlopok" class="col">
+        {{allat[oszlop]}}
+    </div>
+    <div class="col">
+        <button (click)="deleteAnimal(allat)" type="button" class="btn btn-danger">Delete</button>
+    </div>
+</div>
+
+
+
+
+<!-- {{animals|json}} -->

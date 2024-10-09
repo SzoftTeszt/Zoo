@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { AnimalsComponent } from './animals/animals.component';
 import { HelpCompComponent } from './help-comp/help-comp.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
